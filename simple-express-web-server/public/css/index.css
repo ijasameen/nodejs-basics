@@ -1,0 +1,63 @@
+@import url(./shared.css);
+
+main {
+  padding: 0;
+  background-color: var(--color-secondary-400);
+}
+
+.content-wrapper {
+  width: min(100rem, 100%);
+  margin-inline: auto;
+}
+
+.hero-image {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/7;
+  margin-inline: auto;
+  object-fit: cover;
+  object-position: 0 -90px;
+}
+
+.banner {
+  height: 5rem;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--color-secondary-300);
+}
+
+.moving-text {
+  --anim-duration: 12s;
+  --total-elements: 4;
+  position: absolute;
+  left: -5ch;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 3rem;
+  line-height: 4.5rem;
+  animation: banner-text-anim var(--anim-duration) linear infinite;
+}
+
+.moving-text:nth-child(2) {
+  animation-delay: calc(var(--anim-duration) / var(--total-elements));
+}
+
+.moving-text:nth-child(3) {
+  animation-delay: calc(calc(var(--anim-duration) / var(--total-elements)) * 2);
+}
+
+.moving-text:nth-child(4) {
+  animation-delay: calc(calc(var(--anim-duration) / var(--total-elements)) * 3);
+}
+
+@keyframes banner-text-anim {
+  0% {
+    left: -5ch;
+  }
+  50% {
+    color: var(--color-primary-500);
+  }
+  100% {
+    left: 100%;
+  }
+}

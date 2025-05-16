@@ -1,0 +1,70 @@
+@import url(./shared.css);
+
+main {
+  padding-top: 3rem;
+}
+
+.quote-widget {
+  width: min(60ch, 100%);
+  margin-inline: auto;
+  background-color: var(--color-secondary-300);
+}
+
+.quote-widget__header {
+  padding: 0.25em 1.5em;
+  color: var(--color-secondary-400);
+  background-color: var(--color-primary-300);
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+.quote-widget__content {
+  padding: 1em 2em;
+  height: 8lh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.quote-widget__quote {
+  font-size: 1.25rem;
+  font-style: italic;
+}
+
+.quote-widget__author {
+  font-weight: bold;
+}
+
+.quote-widget__quote {
+  padding: 1em 2em;
+  height: 8lh;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.quote-widget__controls {
+  padding: 1em 1.5em 1.5em;
+  display: flex;
+  justify-content: center;
+  gap: 0.5em;
+}
+
+.quote-widget__controls button {
+  font-size: 1.125rem;
+}
+
+.quote-widget__controls button:nth-child(1) {
+  border-radius: 1em 4px 4px 1em;
+}
+
+.quote-widget__controls button:nth-child(2) {
+  border-radius: 4px;
+}
+
+.quote-widget__controls button:nth-child(3) {
+  border-radius: 4px 1em 1em 4px;
+}
