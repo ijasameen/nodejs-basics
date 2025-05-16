@@ -4,6 +4,7 @@ import rootRouter from "./routes/root.js";
 import quotesRouter from "./routes/quotes.js";
 import path from "path";
 import serveJson from "./middleware/serveJson.js";
+import handleErrors from "./middleware/handleErrors.js";
 
 const app = express();
 
@@ -36,6 +37,8 @@ app.use("/", (req, res, next) => {
     res.send("404 not found!");
   }
 });
+
+app.use(handleErrors);
 
 app.listen(PORT, () =>
   console.log(`Server running at http://localhost:${PORT}/`)
