@@ -1,0 +1,105 @@
+:root {
+  --color-primary-100: hsl(0, 0%, 0%);
+  --color-primary-200: hsl(0, 0%, 4%);
+  --color-primary-300: hsl(0, 0%, 10%);
+  --color-primary-400: hsl(0, 0%, 16%);
+  --color-primary-500: hsl(0, 0%, 22%);
+  --color-primary-600: hsl(0, 0%, 30%);
+
+  --color-secondary-100: hsl(0, 0%, 98%);
+  --color-secondary-200: hsl(0, 0%, 92%);
+  --color-secondary-300: hsl(0, 0%, 86%);
+  --color-secondary-400: hsl(0, 0%, 78%);
+  --color-secondary-500: hsl(0, 0%, 70%);
+  --color-secondary-600: hsl(0, 0%, 60%);
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+body {
+  background-color: var(--color-secondary-200);
+}
+
+main {
+  padding-top: 2em;
+}
+
+.page-header {
+  padding: 1em 2em;
+  background-color: var(--color-primary-200);
+}
+
+.page-header__nav {
+  display: flex;
+  justify-content: center;
+  gap: 1.25em;
+}
+
+.page-header__nav-link {
+  color: var(--color-secondary-200);
+  text-decoration: none;
+  border: 1px solid var(--color-secondary-200);
+  padding: 0.3em 0.9em;
+  border-radius: 9999px;
+  user-select: none;
+  transition: background-color 100ms ease-in, color 50ms ease-in;
+}
+
+.page-header__nav-link:hover {
+  color: var(--color-primary-200);
+  background-color: var(--color-secondary-200);
+}
+
+.page-header__nav-link:active {
+  color: var(--color-primary-200);
+  background-color: var(--color-secondary-300);
+}
+
+.container {
+  width: min(50rem, calc(100% - 2rem));
+  margin-inline: auto;
+}
+
+.page-heading {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.btn {
+  padding: 0.3em 0.9em;
+  min-width: 6ch;
+  color: var(--color-primary-200);
+  background-color: var(--color-secondary-500);
+  border: 2px solid var(--color-primary-400);
+  border-radius: 9999px;
+  font-size: inherit;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 100ms ease-in, color 50ms ease-in;
+}
+
+.btn.btn-round {
+  min-width: 2.5em;
+  padding: 0.2em;
+  aspect-ratio: 1/1;
+}
+
+.btn:hover {
+  color: var(--color-secondary-200);
+  background-color: var(--color-primary-300);
+}
+
+.btn:active {
+  background-color: var(--color-primary-100);
+}
